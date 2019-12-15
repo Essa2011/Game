@@ -1,0 +1,24 @@
+﻿@model Teams
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body bg-light">
+        <form asp-controller="Team" asp-action="AddTeam" method="post">
+            <div class="form-group">
+                <label asp-for="Name">Team Name:</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Location">Location:</label>
+                <select asp-for="Location" asp-items="@ViewBag.teamLoc"></select>
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" value="Add" class="btn btn-primary" > Add </button>
+                <div class="text-primary">@ViewBag.UserMessage</div>
+            </div>
+
+        </form>
+    </div>
+</div>

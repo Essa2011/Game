@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "GameConnectionString": "server=(localdb)\\ProjectsV13; Database=GameDB; Integrated security=true; MultipleActiveResultSets=true;"
+  }
+}

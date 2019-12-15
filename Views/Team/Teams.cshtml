@@ -1,0 +1,28 @@
+﻿
+@model IEnumerable<Teams>
+
+<h1>Teams</h1>
+
+<button class="btn-primary" onclick="location.href = '@Url.Action("AddTeam","Team")'">New Team</button>
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>Name: @p.Name</td>
+            <td>Location: @p.Location</td>
+            <td>@Html.ActionLink("Delete", "DeleteTeam", "Team", new { ID = p.Id }, new { @class = "btn btn-danger" }) | @Html.ActionLink("Edit", "EditTeam", "Team", new { ID = p.Id }, new { @class = "btn btn-primary" })</td>
+        </tr>
+
+
+
+    }
+</table>
+

@@ -1,0 +1,15 @@
+﻿@model Teams
+
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body bg-light">
+        <form asp-controller="Team" asp-action="DeleteTeam" method="post">
+            <div class="form-group">
+                <label> are you sure?</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" value="Delete" class="btn btn-primary"> Delete</button>
+            </div>
+        </form>
+    </div>
+</div>

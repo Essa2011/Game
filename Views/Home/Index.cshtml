@@ -1,0 +1,49 @@
+﻿
+@model IEnumerable<GameVM>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="row">
+
+        <button class="card card-body bg-light " onclick="location.href = '@Url.Action("Teams","Team")'">
+            Teams
+        </button>
+
+        <button class="card card-body bg-light" onclick="location.href = '@Url.Action("Games","Game")'">
+            Game
+        </button>
+        <button class="card card-body bg-light" onclick="location.href = '@Url.Action("Players","Player")'">
+            Players
+        </button>
+    </div>
+    <br />
+
+    <h2>UpcomingGame</h2>
+
+    <div class="col-md-6 offset-md-3">
+        <div class="card card-body bg-light">
+            <table width="100%">
+                <tr>
+                    <th>Home</th>
+                    <th>Away</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+                @foreach (var g in Model)
+                {
+                    <tr>
+                        <td>@g.TeamAName</td>
+                        <td>@g.TeamBName</td>
+                        <td>@g.StartTime</td>
+                        <td>@g.EndTime</td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+
+
+</div>

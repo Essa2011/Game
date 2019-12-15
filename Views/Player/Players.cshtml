@@ -1,0 +1,38 @@
+﻿@model IEnumerable<PlayerVM>
+
+<h1>Players</h1>
+
+
+<button class="btn-primary" onclick="location.href = '@Url.Action("AddPlayer","Player")'">New Player</button>
+
+
+<table width="100%">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Speed</th>
+        <th>Team</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+
+
+        <tr>
+            <td>@p.playerName</td>
+            <td>@p.playerAge</td>
+            <td>@p.playerHeight</td>
+            <td>@p.playerWeight</td>
+            <td>@p.playerSpeed</td>
+            <td>@p.teamName</td>
+            <td>@Html.ActionLink("Delete", "DeletePlayer", "Player", new { ID = p.playerID }, new { @class = "btn btn-danger" }) | @Html.ActionLink("Edit", "EditPlayer", "Player", new { ID = p.playerID }, new { @class = "btn btn-primary" })</td>
+            
+            
+        </tr>
+
+
+    }
+</table>
+

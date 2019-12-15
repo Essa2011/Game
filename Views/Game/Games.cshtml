@@ -1,0 +1,30 @@
+﻿
+@model IEnumerable<GameVM>
+
+
+<h1>Games</h1>
+
+<button class="btn-primary" onclick="location.href = '@Url.Action("AddGame","Game")'">New Game</button>
+
+<table width="100%">
+    <tr>
+        <th>Home</th>
+        <th>Away</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Score</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var g in Model)
+    {
+        <tr>
+            <td>@g.TeamAName</td>
+            <td>@g.TeamBName</td>
+            <td>@g.StartTime</td>
+            <td>@g.EndTime</td>
+            <td>@g.Score</td>
+            <td>@Html.ActionLink("Edit", "EditGame", "Game", new { ID = g.ID }, new { @class = "btn btn-primary" })</td>
+        </tr>
+    }
+
+</table>

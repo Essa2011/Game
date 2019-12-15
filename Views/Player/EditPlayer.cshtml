@@ -1,0 +1,35 @@
+﻿@model Players
+
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body bg-light">
+        <form asp-controller="Player" asp-action="EditPlayer" method="post">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" value="@ViewBag.PlayerName" disabled/>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Height"></label>
+                <input asp-for="Height" class="form-control" value="@ViewBag.playerHeight"/>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Weight"></label>
+                <input asp-for="Weight" class="form-control" value="@ViewBag.PlayerWeight"/>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Speed"></label>
+                <input asp-for="Speed" class="form-control" value="@ViewBag.PlayerSpeed"/>
+            </div>
+
+            <div class="form-group">
+            <button type="submit" class="btn btn-primary"> Update</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
