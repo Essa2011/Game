@@ -23,7 +23,7 @@
             <td>@g.StartTime</td>
             <td>@g.EndTime</td>
             <td>@g.Score</td>
-            <td>@Html.ActionLink("Edit", "EditGame", "Game", new { ID = g.ID }, new { @class = "btn btn-primary" })</td>
+            <td>@Html.ActionLink("Edit", "EditGame", "Game", new { ID = g.ID }, new { @class = "btn btn-primary" }) | @Html.ActionLink("Delete", "DeleteGame", "Game", new { ID = g.ID}, new { @class = "btn btn-danger" })</td>
         </tr>
     }
 

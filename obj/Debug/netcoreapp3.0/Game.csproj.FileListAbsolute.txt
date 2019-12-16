@@ -154,3 +154,4 @@ C:\Users\ealmasoud\source\repos\Game\obj\Debug\netcoreapp3.0\Razor\Views\Team\De
 C:\Users\ealmasoud\source\repos\Game\obj\Debug\netcoreapp3.0\Razor\Views\Team\EditTeam.cshtml.g.cs
 C:\Users\ealmasoud\source\repos\Game\obj\Debug\netcoreapp3.0\Razor\Views\Team\Teams.cshtml.g.cs
 C:\Users\ealmasoud\source\repos\Game\obj\Debug\netcoreapp3.0\Razor\Views\Home\UpcomingGame.cshtml.g.cs
+C:\Users\ealmasoud\source\repos\Game\obj\Debug\netcoreapp3.0\Razor\Views\Game\DeleteGame.cshtml.g.cs

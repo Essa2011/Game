@@ -126,5 +126,30 @@ namespace Game.Controllers
             return RedirectToAction("Games");
         }
 
+        public IActionResult DeleteGame()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult DeleteGame(int ID)
+        {
+            ModelState.Clear();
+            if (ModelState.IsValid)
+            {
+
+                var D_game = _context.Games.FirstOrDefault(o => o.Id == ID);
+
+                _context.Games.Remove(D_game);
+                _context.SaveChanges();
+
+                ModelState.Clear();
+            }
+
+            return RedirectToAction("Games");
+            
+        }
     }
+
+    
 }
